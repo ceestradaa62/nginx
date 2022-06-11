@@ -1,5 +1,5 @@
 ---
-- hosts: rhel9
+- hosts: all
   tasks:
       - name: Install nginx web server
         dnf: name=nginx state=installed update_cache=true
