@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
       - name: Install nginx web server
-        dnf: name=nginx state=installed update_cache=true
+        dnf: name = nginx state=installed update_cache=true
      - name: start nginx
        service:
        name: nhinx
