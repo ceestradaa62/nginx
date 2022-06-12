@@ -3,9 +3,8 @@
   tasks:
       - name: Install nginx web server
         dnf: name=nginx state=installed update_cache=true
-        notify:
-          - start nginx
-
-  handlers:
-      - name: start nginx
-        service: name=nginx enable=yes state=started
+     - name start nginx
+       service:
+       name: nhinx
+       state: started
+       enable: yes
