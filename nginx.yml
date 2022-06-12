@@ -3,7 +3,7 @@
   tasks:
       - name: Install nginx web server
         dnf: name=nginx state=installed update_cache=true
-     - name start nginx
+     - name: start nginx
        service:
        name: nhinx
        state: started
