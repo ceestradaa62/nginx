@@ -1,10 +1,9 @@
 ---
 - hosts: all
   tasks:
-      - name: Install nginx web server
-        dnf: name = nginx state=installed update_cache=true
-     - name: start nginx
-       service:
-       name: nhinx
-       state: started
-       enable: yes
+    - name: ensure nginx is at the latest version
+      apt: name=nginx state=latest
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
