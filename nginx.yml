@@ -15,3 +15,5 @@
     service: 
       name: firewalld 
       state: restarted
+  - name: Restart httpd services
+    command: /usr/bin/systemctl restart httpd
