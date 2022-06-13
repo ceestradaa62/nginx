@@ -8,11 +8,11 @@
       state: present
   - name: ensure httpd is running
     service:
-      name: httpd 
+      name: httpd.service 
       state: started
   - name: Open port 80 for http access
     firewalld:
-      service: http
+      service: httpd.service
       permanent: true
       state: enabled
   - name: Restart the firewalld service to load in the firewall changes
