@@ -1,0 +1,8 @@
+---
+- name: Set Message of the Day (motd)
+  hosts: testserver
+  tasks:
+    - name: copy motd file
+      copy:
+        src: files/motd
+        dest: /etc/motd
