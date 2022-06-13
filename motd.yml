@@ -1,6 +1,6 @@
 ---
 - name: Set Message of the Day (motd)
-  hosts: testserver
+  hosts: all
   tasks:
     - name: copy motd file
       copy:
